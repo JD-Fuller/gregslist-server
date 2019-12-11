@@ -11,7 +11,7 @@ mongoose.connection.on("error", err => {
 export default class DbContext {
   static async connect() {
     try {
-      let status = await mongoose.connect(process.env.CONNECTION_STRING); //TODO Make sure you set this in .env
+      let status = await mongoose.connect(process.env.CONNECTION_STRING);
       console.log("CONNECTED TO DATABASE");
       return status;
     } catch (e) {
